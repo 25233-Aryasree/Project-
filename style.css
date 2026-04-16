@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #0a192f;
+    --secondary-color: #112240;
+    --accent-color: #64ffda;
+    --text-color: #ccd6f6;
+    --text-muted: #8892b0;
+    --bg-color: #020c1b;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --card-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Forms */
+.form-container {
+    max-width: 450px;
+    margin: 80px auto;
+    background: var(--secondary-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    border: 1px solid #233554;
+    border-radius: 4px;
+    color: var(--text-color);
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Flash Messages */
+.flash {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.flash.success { border: 1px solid var(--success-color); color: var(--success-color); }
+.flash.error { border: 1px solid var(--error-color); color: var(--error-color); }
+
+/* Dashboard Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #233554;
+}
+
+/* User Dashboard Cards */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
