@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - Finance Identity Security Framework{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Identity Security for Modern Finance</h1>
+    <p>A high-performance, secure authentication and authorization framework designed to protect financial accounts using state-of-the-art encryption and role-based access control.</p>
+    <div>
+        <a href="{{ url_for('signup') }}" class="button" style="padding: 15px 40px; border: 1px solid var(--accent-color); border-radius: 4px; color: var(--accent-color); margin-right: 20px;">Get Started</a>
+        <a href="{{ url_for('login') }}" class="button" style="padding: 15px 40px; border: 1px solid var(--text-color); border-radius: 4px; color: var(--text-color);">Secure Login</a>
+    </div>
+</div>
+
+<div class="features container" style="display: flex; gap: 40px; margin-top: 80px;">
+    <div style="flex: 1; background: var(--secondary-color); padding: 30px; border-radius: 12px;">
+        <h3 style="color: var(--accent-color); margin-bottom: 15px;">Secure Hashing</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Utilizing Scrypt password hashing to ensure maximum protection against brute-force attacks and rainbow table compromises.</p>
+    </div>
+    <div style="flex: 1; background: var(--secondary-color); padding: 30px; border-radius: 12px;">
+        <h3 style="color: var(--accent-color); margin-bottom: 15px;">Role-Based Access</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Granular authorization levels for administrative control and user privacy management.</p>
+    </div>
+    <div style="flex: 1; background: var(--secondary-color); padding: 30px; border-radius: 12px;">
+        <h3 style="color: var(--accent-color); margin-bottom: 15px;">Audit Ready</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Detailed logging and user activity tracking built into the core identity security framework.</p>
+    </div>
+</div>
+{% endblock %}
